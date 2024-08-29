@@ -54,7 +54,7 @@ public class VertexOrder extends AbstractAlgorithm {
         }
         layers = new Vertex[network.getMaxLayer()+1][];
         for (int l = 0; l < lyrs.length; l++) {
-            Vertex[] layer = lyrs[l].toArray(null);
+            Vertex[] layer = lyrs[l].toArray(new Vertex[lyrs[l].size()]);
             layers[l] = layer;
         }
         sortLayer(layers[0], birthOrder);
